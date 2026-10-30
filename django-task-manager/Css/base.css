@@ -1,0 +1,511 @@
+
+/* ==============================
+   Global Variables
+================================ */
+
+:root {
+    --ink: #202333;
+    --muted: #85899a;
+    --line: #eceef3;
+    --surface: #ffffff;
+    --page: #f7f8fc;
+
+    --accent: #6558d3;
+    --accent-dark: #5144bd;
+
+    --green: #238765;
+
+    --shadow: 0 8px 28px rgba(32, 35, 51, 0.04);
+}
+
+
+/* ==============================
+   Reset
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   Main Layout
+================================ */
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* ==============================
+   Sidebar
+================================ */
+
+.sidebar {
+    width: 238px;
+    flex-shrink: 0;
+
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+
+    padding: 28px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 750;
+    font-size: 19px;
+    letter-spacing: -0.5px;
+
+    padding: 0 8px 42px;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+    color: white;
+
+    font-size: 19px;
+}
+
+.nav-label,
+.eyebrow {
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.3px;
+    color: #9a9dae;
+}
+
+.nav-label {
+    padding: 0 10px;
+    margin: 0 0 10px;
+}
+
+.nav {
+    display: grid;
+    gap: 5px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    border-radius: 9px;
+
+    color: #73778a;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    background: #f0efff;
+    color: var(--accent);
+}
+
+.nav-icon {
+    font-size: 17px;
+}
+
+
+/* ==============================
+   Sidebar User
+================================ */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid var(--line);
+
+    padding: 20px 5px 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #e9e7ff;
+    color: var(--accent);
+
+    font-weight: 750;
+}
+
+.user-info strong,
+.user-info small {
+    display: block;
+}
+
+.user-info strong {
+    font-size: 12px;
+}
+
+.user-info small {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+/* ==============================
+   Main Content
+================================ */
+
+.main-content {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+
+    padding: 35px 42px 20px;
+}
+
+
+/* ==============================
+   Header
+================================ */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.topbar h1 {
+    font-size: 27px;
+    letter-spacing: -0.8px;
+    margin: 5px 0 0;
+}
+
+
+/* ==============================
+   Buttons
+================================ */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 0;
+    border-radius: 8px;
+
+    padding: 10px 15px;
+
+    font: inherit;
+    font-weight: 650;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.button-primary:hover {
+    background: var(--accent-dark);
+}
+
+.button-secondary {
+    background: white;
+    border: 1px solid var(--line);
+    color: var(--ink);
+}
+
+.button-secondary:hover {
+    background: #f0efff;
+}
+
+
+/* ==============================
+   Cards
+================================ */
+
+.content-card {
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 16px;
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.muted {
+    color: var(--muted);
+    margin: 5px 0 0;
+}
+
+.text-link {
+    font-weight: 650;
+    color: var(--accent);
+    font-size: 12px;
+}
+
+
+/* ==============================
+   Task List
+================================ */
+
+.task-list {
+    display: grid;
+}
+
+.task-row {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #f0f1f5;
+}
+
+
+/* ==============================
+   Interactive Task Checkbox
+================================ */
+
+.task-check {
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.task-check input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.task-check span {
+    width: 20px;
+    height: 20px;
+
+    border: 1.5px solid #d7d9e4;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    transition: 0.2s ease;
+}
+
+.task-check input:checked + span {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.task-check input:checked + span::after {
+    content: "✓";
+
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.task-check input:focus-visible + span {
+    outline: 3px solid #6558d344;
+    outline-offset: 3px;
+}
+
+
+.task-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.task-info strong,
+.task-info small {
+    display: block;
+}
+
+.task-info strong {
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.task-info small {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #999dad;
+}
+
+
+/* ==============================
+   Status
+================================ */
+
+.status-pill {
+    border-radius: 20px;
+    padding: 5px 9px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.status-pending {
+    background: #fff4df;
+    color: #a76b13;
+}
+
+.status-done {
+    background: #e8f7f0;
+    color: var(--green);
+}
+
+
+/* ==============================
+   Footer
+================================ */
+
+.footer {
+    text-align: center;
+
+    color: #a0a3b1;
+    font-size: 11px;
+
+    padding: 24px 0 5px;
+}
+
+
+/* ==============================
+   Responsive Design
+================================ */
+
+@media (max-width: 760px) {
+
+    .sidebar {
+        width: 68px;
+        padding: 22px 9px;
+    }
+
+    .brand {
+        padding: 0 8px 35px;
+        font-size: 0;
+    }
+
+    .brand-mark {
+        flex-shrink: 0;
+    }
+
+    .nav-label,
+    .nav-link:not(.active) span,
+    .sidebar-bottom .user-info {
+        display: none;
+    }
+
+    .nav-link {
+        justify-content: center;
+        padding: 12px 6px;
+        font-size: 0;
+    }
+
+    .nav-icon {
+        font-size: 17px;
+    }
+
+    .sidebar-bottom {
+        justify-content: center;
+    }
+
+    .main-content {
+        padding: 25px 16px;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .content-card {
+        padding: 18px;
+    }
+
+    .status-pill {
+        display: none;
+    }
+}

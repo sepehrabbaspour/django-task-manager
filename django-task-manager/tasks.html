@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Tasks | Taskflow</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/tasks.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">✓</span>
+                <span>Taskflow</span>
+            </a>
+
+            <p class="nav-label">WORKSPACE</p>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="tasks.html" class="nav-link active">
+                    <span class="nav-icon">☷</span>
+                    My Tasks
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="avatar">U</div>
+                <div class="user-info">
+                    <strong>Your account</strong>
+                    <small>Personal workspace</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <span class="eyebrow">PERSONAL WORKSPACE</span>
+                    <h1>My Tasks</h1>
+                </div>
+
+                <a href="index.html" class="button button-secondary">
+                    ← Dashboard
+                </a>
+            </header>
+
+            <section class="content-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Your task list</h2>
+                        <p class="muted">
+                            Add a task and keep track of your progress.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="task-form">
+                    <label for="task-title">Task title</label>
+
+                    <div class="form-row">
+                        <input
+                            type="text"
+                            id="task-title"
+                            name="title"
+                            placeholder="What do you need to do?"
+                            required
+                        >
+
+                        <button type="submit" class="button button-primary">
+                            + Add task
+                        </button>
+                    </div>
+                </form>
+
+                <div class="task-list">
+
+                    <div class="task-row">
+                        <label class="task-check">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+
+                        <div class="task-info">
+                            <strong class="completed-text">
+                                Finish HTML fundamentals
+                            </strong>
+                            <small>Completed yesterday</small>
+                        </div>
+
+                        <span class="status-pill status-done">
+                            Completed
+                        </span>
+                    </div>
+
+                    <div class="task-row">
+                        <label class="task-check">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+
+                        <div class="task-info">
+                            <strong>Learn CSS Flexbox</strong>
+                            <small>Due today</small>
+                        </div>
+
+                        <span class="status-pill status-pending">
+                            To do
+                        </span>
+                    </div>
+
+                    <div class="task-row">
+                        <label class="task-check">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+
+                        <div class="task-info">
+                            <strong>Build a Django project</strong>
+                            <small>Due tomorrow</small>
+                        </div>
+
+                        <span class="status-pill status-pending">
+                            To do
+                        </span>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="footer">
+                Taskflow · A personal task management project
+            </footer>
+
+        </main>
+    </div>
+</body>
+</html>
